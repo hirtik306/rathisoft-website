@@ -1,0 +1,181 @@
+<!-- ============================================================
+     RATHISOFT — SHARED HEADER / NAVIGATION
+     ============================================================ -->
+
+<style>
+/* ── NAV ───────────────────────────────── */
+nav {
+  position: sticky; top: 0; z-index: 500;
+  background: var(--nav, rgba(19,19,26,0.92));
+  backdrop-filter: blur(24px) saturate(160%);
+  border-bottom: 1px solid var(--border, rgba(255,255,255,0.07));
+}
+.nav-in {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  height: 64px; padding: 0 52px;
+}
+.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; cursor: pointer; }
+.logo-box {
+  width: 36px; height: 36px; border-radius: 9px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 19px;
+  font-weight: 700; color: #fff;
+  box-shadow: 0 0 16px rgba(99,102,241,0.18);
+}
+.logo-text {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px;
+  font-weight: 700; color: #ffffff; letter-spacing: -0.5px;
+}
+.logo-text span { color: #818cf8; }
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links a {
+  font-size: 13px; font-weight: 400; color: #ffffff;
+  text-decoration: none; padding: 6px 2px; position: relative;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  border-radius: 100px; transition: width 0.3s ease;
+}
+.nav-links a:hover { color: #818cf8; }
+.nav-links a:hover::after { width: 100%; }
+.nav-btn {
+  background: #6366f1; color: #fff; border: none;
+  padding: 10px 22px; border-radius: 8px;
+  font-size: 13px; font-weight: 500;
+  font-family: 'Inter', sans-serif; cursor: pointer;
+  text-decoration: none; transition: all 0.2s;
+  box-shadow: 0 0 20px rgba(99,102,241,0.18);
+}
+.nav-btn:hover {
+  background: #4f46e5; transform: translateY(-1px);
+  box-shadow: 0 4px 24px rgba(99,102,241,0.35);
+}
+
+/* ── MOBILE MENU BUTTON ──────────────────── */
+.mob-btn {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 8px; z-index: 99999;
+  background: none; border: none; position: relative;
+}
+.mob-btn span {
+  width: 24px; height: 2px; background: #fff;
+  border-radius: 2px; transition: all 0.3s; display: block;
+}
+.mob-btn.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.mob-btn.open span:nth-child(2) { opacity: 0; width: 0; }
+.mob-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+/* ── MOBILE FULL-SCREEN OVERLAY NAV ──────────────── */
+#rsMobOverlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  z-index: 99998;
+  background: #0a0a12;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+#rsMobOverlay.rs-open {
+  display: flex;
+  opacity: 1;
+}
+#rsMobOverlay a {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(28px, 7vw, 48px);
+  font-weight: 700;
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+}
+#rsMobOverlay a:hover { color: #818cf8 !important; }
+
+@media (max-width: 960px) {
+  .nav-links  { display: none; }
+  .nav-in     { padding: 0 20px; }
+  .mob-btn    { display: flex; }
+  .nav-btn    { display: none; }
+}
+</style>
+
+<!-- Main navigation bar -->
+<nav id="mainNav">
+  <div class="nav-in">
+    <a href="index.html" class="logo" title="Rathisoft Home">
+      <div class="logo-box">R</div>
+      <span class="logo-text">Rathi<span>soft</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-btn">Get a free quote →</a>
+    <button class="mob-btn" id="mobBtn" onclick="rsMobToggle()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<script>
+(function () {
+  // ── Create overlay and append directly to body ──
+  if (document.getElementById('rsMobOverlay')) return;
+
+  var overlay = document.createElement('div');
+  overlay.id = 'rsMobOverlay';
+  overlay.innerHTML = [
+    '<a href="index.html"          onclick="rsMobClose()">Home</a>',
+    '<a href="services.html"        onclick="rsMobClose()">Services</a>',
+    '<a href="work.html"           onclick="rsMobClose()">Work</a>',
+    '<a href="packages.html"       onclick="rsMobClose()">Packages</a>',
+    '<a href="about.html"          onclick="rsMobClose()">About Us</a>',
+    '<a href="contact.html"        onclick="rsMobClose()">Contact</a>'
+  ].join('');
+
+  // Wait for body to be ready, then append
+  function appendOverlay() {
+    document.body.appendChild(overlay);
+  }
+  if (document.body) {
+    appendOverlay();
+  } else {
+    document.addEventListener('DOMContentLoaded', appendOverlay);
+  }
+
+  window.rsMobToggle = function () {
+    var btn = document.getElementById('mobBtn');
+    var ov  = document.getElementById('rsMobOverlay');
+    if (!btn || !ov) return;
+    var isOpen = ov.classList.toggle('rs-open');
+    btn.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  };
+
+  window.rsMobClose = function () {
+    var btn = document.getElementById('mobBtn');
+    var ov  = document.getElementById('rsMobOverlay');
+    if (btn) btn.classList.remove('open');
+    if (ov)  ov.classList.remove('rs-open');
+    document.body.style.overflow = '';
+  };
+
+  // Scroll shadow on main nav
+  window.addEventListener('scroll', function () {
+    var nav = document.getElementById('mainNav');
+    if (nav) nav.style.boxShadow = window.scrollY > 10 ? '0 4px 24px rgba(0,0,0,0.3)' : 'none';
+  }, { passive: true });
+}());
+</script>

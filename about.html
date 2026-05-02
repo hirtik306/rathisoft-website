@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Rathisoft</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%234f46e5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='38' font-weight='700' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#13131a;--bg2:#1c1c27;--bg3:#22222f;--card:#1e1e2d;--indigo:#6366f1;--indigo2:#818cf8;--indigo3:#4f46e5;--iglow:rgba(99,102,241,0.18);--isoft:rgba(99,102,241,0.08);--border:rgba(255,255,255,0.07);--border2:rgba(99,102,241,0.3);--white:#fff;--g1:#ffffff;--g2:#ffffff;--g3:#ffffff;--g4:#ffffff;--gold:#f59e0b;--fh:'Bricolage Grotesque',sans-serif;--fb:'Inter',sans-serif;--r2:18px;--r3:24px;--sh2:0 8px 40px rgba(0,0,0,0.35);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--fb);background:var(--bg);color:#ffffff;-webkit-font-smoothing:antialiased;}
+h1{font-family:var(--fh);font-size:clamp(44px,5.5vw,76px);font-weight:700;line-height:1.05;letter-spacing:-2px;color:var(--white);}
+h2{font-family:var(--fh);font-size:clamp(26px,3vw,40px);font-weight:600;color:var(--white);letter-spacing:-0.5px;}
+h3{font-family:var(--fh);font-size:18px;font-weight:600;color:var(--white);margin-bottom:14px;}
+p{line-height:1.85;font-weight:300;color:#ffffff;}
+a{text-decoration:none;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 52px;}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--indigo2);margin-bottom:14px;}
+.label::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,var(--indigo),transparent);}
+nav{position:sticky;top:0;z-index:500;background:rgba(19,19,26,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 52px;}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-box{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--indigo),var(--indigo3));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:19px;font-weight:700;color:#fff;box-shadow:0 0 16px var(--iglow);}
+.logo-text{font-family:var(--fh);font-size:20px;font-weight:700;color:var(--white);letter-spacing:-0.5px;}
+.logo-text span{color:var(--indigo2);}
+.nav-links{display:flex;gap:30px;list-style:none;}
+.nav-links a{font-size:13px;color:#ffffff;text-decoration:none;padding:6px 2px;position:relative;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,#6366f1,#8b5cf6);border-radius:100px;transition:width 0.3s ease;}
+.nav-links a:hover{color:#818cf8;}
+.nav-links a:hover::after{width:100%;}
+.nav-btn{background:var(--indigo);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:500;font-family:var(--fb);cursor:pointer;text-decoration:none;transition:all 0.2s;}
+.nav-btn:hover{background:var(--indigo3);transform:translateY(-1px);}
+
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--bg),var(--bg2));position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-120px;left:-80px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.07) 0%,transparent 65%);pointer-events:none;}
+.hero .wrap{position:relative;z-index:1;}
+.hero p{font-size:16px;margin-top:12px;max-width:520px;}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:52px 0 0;}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:24px 18px;text-align:center;transition:all 0.25s;cursor:default;}
+.sc:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:var(--sh2);}
+.sc-n{font-family:var(--fh);font-size:36px;font-weight:700;color:var(--white);letter-spacing:-1.5px;line-height:1;}
+.sc-n em{font-style:normal;color:var(--indigo2);}
+.sc-l{font-size:11px;color:#ffffff;margin-top:5px;}
+
+.about-layout{display:grid;grid-template-columns:290px 1fr;gap:60px;align-items:start;padding:60px 0 80px;}
+.about-card{background:var(--card);border:1px solid var(--border2);border-radius:var(--r3);padding:36px 26px;text-align:center;position:sticky;top:80px;}
+.av{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--indigo3));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:36px;font-weight:700;color:#fff;margin:0 auto 18px;box-shadow:0 8px 32px var(--iglow);}
+.av-name{font-family:var(--fh);font-size:19px;font-weight:600;margin-bottom:4px;}
+.av-role{font-size:11px;color:#ffffff;margin-bottom:22px;}
+.badges{display:flex;flex-direction:column;gap:8px;}
+.badge{font-size:11px;color:#ffffff;background:var(--bg3);border:1px solid var(--border);padding:9px 12px;border-radius:9px;display:flex;align-items:center;gap:8px;transition:border-color 0.2s;}
+.badge:hover{border-color:var(--border2);}
+.badge::before{content:'◆';font-size:6px;color:var(--indigo2);}
+
+.body-text p{font-size:15px;line-height:2;margin-bottom:18px;}
+.body-text strong{color:#ffffff;font-weight:500;}
+
+.skills-block{margin-top:36px;}
+.skill-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px;}
+.skill{font-size:11px;font-weight:500;padding:6px 14px;border-radius:100px;background:var(--isoft);border:1px solid rgba(99,102,241,0.15);color:var(--indigo2);transition:all 0.2s;cursor:default;}
+.skill:hover{background:rgba(99,102,241,0.15);border-color:var(--border2);}
+
+.timeline{margin-top:40px;border-top:1px solid var(--border);padding-top:32px;}
+.tl{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--border);}
+.tl:last-child{border-bottom:none;}
+.tl-year{font-size:10px;color:var(--indigo2);font-weight:600;letter-spacing:1px;min-width:68px;padding-top:2px;}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:var(--indigo);box-shadow:0 0 8px var(--iglow);margin-top:5px;flex-shrink:0;}
+.tl-info{}
+.tl-title{font-size:14px;color:#ffffff;font-weight:500;margin-bottom:4px;}
+.tl-desc{font-size:12px;color:#ffffff;line-height:1.65;}
+
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--indigo);color:#fff;padding:13px 26px;border-radius:10px;font-size:13px;font-weight:500;font-family:var(--fb);transition:all 0.25s;box-shadow:0 4px 20px var(--iglow);}
+.btn-p:hover{background:var(--indigo3);transform:translateY(-2px);}
+.btn-g{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:13px 24px;border-radius:10px;font-size:13px;font-weight:500;font-family:var(--fb);transition:all 0.25s;}
+.btn-g:hover{background:#20bf5d;transform:translateY(-2px);}
+
+footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 52px 22px;}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.ft-copy{font-size:11px;color:#fff;}
+.ft-soc{display:flex;gap:8px;}
+.ft-sl{width:46px;height:46px;border-radius:11px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;transition:all 0.25s;color:#ffffff;}
+.ft-sl:hover{border-color:var(--border2);background:var(--isoft);color:var(--indigo2);transform:translateY(-2px);}
+
+.wa{position:fixed;bottom:28px;right:28px;z-index:9999;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.25s;}
+.wa:hover{transform:scale(1.1) translateY(-2px);}
+.wa::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;animation:ring 2.5s ease-out 2s infinite;}
+@keyframes ring{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.8);opacity:0}}
+
+@media(max-width:960px){.nav-links{display:none;}.nav-in,.wrap,footer{padding-left:24px;padding-right:24px;}.about-layout{grid-template-columns:1fr;}.about-card{position:static;}.stats{display:none;}.skills-block{display:none;}.timeline{display:none;}}
+</style>
+</head>
+<body>
+<!-- ═══ SHARED HEADER (header.html) ═══ -->
+<div id="site-header"></div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="label">About Us</div>
+    <h1>Suneel Pirkash.</h1>
+    <p>WordPress Developer · Shopify Expert · Founder of Rathisoft · Based in Lahore, Pakistan</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="sc"><div class="sc-n">59<em>+</em></div><div class="sc-l">Projects completed</div></div>
+    <div class="sc"><div class="sc-n">5<em>+</em></div><div class="sc-l">Years experience</div></div>
+    <div class="sc"><div class="sc-n">4.8<em>★</em></div><div class="sc-l">Client rating</div></div>
+    <div class="sc"><div class="sc-n" style="font-size:22px;">UK<em>+US</em></div><div class="sc-l">AUS · EUR · UAE</div></div>
+  </div>
+
+  <div class="about-layout">
+    <div class="about-card">
+      <div class="av">SP</div>
+      <div class="av-name">Suneel Pirkash</div>
+      <div class="av-role">WordPress & Shopify Developer · Lahore</div>
+      <div class="badges">
+        <div class="badge">WordPress Expert</div>
+        <div class="badge">Shopify Developer</div>
+        <div class="badge">5+ Years Experience</div>
+        <div class="badge">UK · US · AUS · EUR</div>
+        <div class="badge">NDA-Ready</div>
+        <div class="badge">24hr Response</div>
+      </div>
+    </div>
+    <!-- jj -->
+    <div class="body-text">
+      <p>I'm <strong>Suneel Pirkash</strong> — a WordPress developer and Shopify expert with 5+ years of experience building fast, beautiful, and conversion-ready websites for businesses around the world.</p>
+      <p>From custom WordPress themes to fully configured Shopify stores, I handle everything — <strong>design, development, plugins, payment gateways, SEO setup, and ongoing support.</strong> My clients get a partner, not just a developer.</p>
+      <p>At Rathisoft, I combine web development with <strong>digital marketing, branding, and content strategy</strong> — so your website doesn't just look great, it actually brings in business.</p>
+      <p>I've worked with clients across <strong>UK, US, Australia, Europe, and UAE</strong> — healthcare clinics, real estate agencies, eCommerce brands, and startups. Every project gets my full attention, on time, every time.</p>
+
+      <div class="skills-block">
+        <h3>Technical Skills</h3>
+        <div class="skill-row">
+          <span class="skill">WordPress</span><span class="skill">Shopify</span><span class="skill">WooCommerce</span><span class="skill">PHP / MySQL</span><span class="skill">Elementor Pro</span><span class="skill">Liquid (Shopify)</span><span class="skill">HTML / CSS</span><span class="skill">JavaScript</span>
+        </div>
+        <h3>Marketing & Growth</h3>
+        <div class="skill-row">
+          <span class="skill">SEO Optimization</span><span class="skill">Speed Optimization</span><span class="skill">Social Media</span><span class="skill">PPC / Google Ads</span><span class="skill">Email Marketing</span><span class="skill">Branding & Design</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h3>Experience</h3>
+        <div class="tl"><div class="tl-year">2024 – Now</div><div class="tl-dot"></div><div class="tl-info"><div class="tl-title">Founder — Rathisoft</div><div class="tl-desc">Building a full-service digital agency offering WordPress, Shopify, SEO, and marketing to clients worldwide.</div></div></div>
+        <div class="tl"><div class="tl-year">2021 – 2024</div><div class="tl-dot"></div><div class="tl-info"><div class="tl-title">Freelance WordPress & Shopify Developer</div><div class="tl-desc">50+ projects delivered across UK, US, UAE — custom themes, eCommerce stores, and digital marketing campaigns.</div></div></div>
+        <div class="tl"><div class="tl-year">2019 – 2021</div><div class="tl-dot"></div><div class="tl-info"><div class="tl-title">Junior Web Developer</div><div class="tl-desc">Started career building WordPress websites and learning digital marketing fundamentals.</div></div></div>
+      </div>
+
+      <div class="btn-row">
+        <a href="index.html#contact" class="btn-p">Work with me →</a>
+        <a href="https://wa.me/923342651544" target="_blank" class="btn-g">💬 WhatsApp me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SHARED FOOTER (footer.html) ═══ -->
+<div id="site-footer"></div>
+
+<script src="header-footer-loader.js"></script>
+
+</body>
+</html>

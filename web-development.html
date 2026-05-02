@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Services — Rathisoft</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%234f46e5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='38' font-weight='700' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#13131a;--bg2:#1c1c27;--bg3:#22222f;--card:#1e1e2d;
+  --indigo:#6366f1;--indigo2:#818cf8;--indigo3:#4f46e5;
+  --iglow:rgba(99,102,241,0.18);--isoft:rgba(99,102,241,0.08);
+  --border:rgba(255,255,255,0.07);--border2:rgba(99,102,241,0.3);
+  --white:#fff;--g1:#ffffff;--g2:#ffffff;--g3:#ffffff;
+  --fh:'Bricolage Grotesque',sans-serif;--fb:'Inter',sans-serif;
+  --r2:18px;--r3:24px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--bg);color:var(--g1);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 52px;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:500;background:rgba(19,19,26,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 52px;}
+.logo{display:flex;align-items:center;gap:11px;cursor:pointer;}
+.logo-box{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--indigo),var(--indigo3));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:19px;font-weight:700;color:#fff;}
+.logo-text{font-family:var(--fh);font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.5px;}
+.logo-text span{color:var(--indigo2);}
+.nav-back{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--indigo2);transition:all 0.2s;border:1px solid var(--border2);padding:9px 18px;border-radius:8px;}
+.nav-back:hover{background:var(--isoft);}
+.nav-back svg{transition:transform 0.2s;}
+.nav-back:hover svg{transform:translateX(-3px);}
+
+/* HERO */
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--bg) 0%,var(--bg2) 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-120px;right:-80px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.08) 0%,transparent 65%);pointer-events:none;}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--indigo2);margin-bottom:16px;}
+.label::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,var(--indigo),transparent);}
+.hero h1{font-family:var(--fh);font-size:clamp(40px,5vw,72px);font-weight:700;line-height:1.06;letter-spacing:-2px;color:#fff;margin-bottom:18px;}
+.hero h1 em{font-style:italic;color:var(--indigo2);}
+.hero p{font-size:16px;color:#ffffff;max-width:540px;line-height:1.8;margin-bottom:36px;}
+
+/* HERO STATS */
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:40px;}
+.hs{text-align:left;}
+.hs-n{font-family:var(--fh);font-size:28px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;}
+.hs-n em{font-style:normal;color:var(--indigo2);}
+.hs-l{font-size:11px;color:#ffffff;margin-top:3px;}
+
+/* HERO TAGS */
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;}
+.htag{font-size:11px;font-weight:500;padding:6px 14px;border-radius:100px;background:var(--isoft);border:1px solid var(--border2);color:var(--indigo2);}
+
+/* WHAT WE BUILD */
+.what-section{padding:72px 0 0;}
+.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px;}
+.wc{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:24px 22px;transition:all 0.25s;}
+.wc:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 8px 32px rgba(99,102,241,0.15);}
+.wc-icon{font-size:28px;margin-bottom:12px;}
+.wc h4{font-family:var(--fh);font-size:14px;font-weight:600;margin-bottom:6px;color:#fff;}
+.wc p{font-size:12px;color:#ffffff;line-height:1.65;}
+
+/* PROJECTS */
+.projects-section{padding:72px 0 80px;}
+.section-head{margin-bottom:48px;}
+.section-head h2{font-family:var(--fh);font-size:clamp(28px,3.5vw,44px);font-weight:600;color:#fff;letter-spacing:-1px;margin-bottom:10px;}
+.section-head p{font-size:15px;color:#ffffff;max-width:480px;}
+
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.proj-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r3);overflow:hidden;transition:all 0.3s;display:block;text-decoration:none;}
+.proj-card:hover{border-color:var(--border2);transform:translateY(-6px);box-shadow:0 20px 60px rgba(99,102,241,0.2);}
+
+/* Screenshot using thumbnail service */
+.proj-thumb{width:100%;height:240px;overflow:hidden;position:relative;background:var(--bg3);}
+.proj-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.5s ease;}
+.proj-card:hover .proj-thumb img{transform:scale(1.04);}
+.proj-thumb-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(19,19,26,0.8) 100%);}
+.proj-visit{position:absolute;top:14px;right:14px;background:rgba(99,102,241,0.9);color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;padding:5px 10px;border-radius:6px;opacity:0;transition:opacity 0.3s;}
+.proj-card:hover .proj-visit{opacity:1;}
+
+.proj-info{padding:22px 24px;}
+.proj-tags-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.proj-tag{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--indigo2);}
+.proj-tag::after{content:'·';margin-left:6px;color:var(--border2);}
+.proj-tag:last-child::after{display:none;}
+.proj-title{font-family:var(--fh);font-size:20px;font-weight:600;color:#fff;margin-bottom:8px;letter-spacing:-0.5px;}
+.proj-desc{font-size:13px;color:#ffffff;line-height:1.7;margin-bottom:16px;}
+.proj-chips{display:flex;gap:6px;flex-wrap:wrap;}
+.proj-chip{font-size:10px;font-weight:500;padding:4px 12px;border-radius:100px;background:var(--isoft);border:1px solid rgba(99,102,241,0.15);color:var(--indigo2);}
+.proj-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:12px;color:var(--indigo2);font-weight:500;border-bottom:1px solid rgba(99,102,241,0.3);padding-bottom:1px;transition:all 0.2s;}
+.proj-link:hover{color:#fff;border-color:#fff;}
+
+/* CTA */
+.cta-strip{background:var(--bg2);border-top:1px solid var(--border);padding:60px 52px;text-align:center;}
+.cta-strip h2{font-family:var(--fh);font-size:clamp(24px,3vw,38px);font-weight:600;color:#fff;margin-bottom:12px;letter-spacing:-0.5px;}
+.cta-strip p{font-size:14px;color:#ffffff;margin-bottom:32px;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:13px 24px;border-radius:10px;font-size:13px;font-weight:600;font-family:var(--fb);transition:all 0.25s;}
+.btn-wa:hover{background:#20bf5d;transform:translateY(-2px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:var(--bg3);color:#fff;border:1px solid var(--border);padding:13px 22px;border-radius:10px;font-size:13px;font-family:var(--fb);transition:all 0.25s;}
+.btn-ghost:hover{border-color:var(--border2);}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 52px;display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-size:11px;color:#ffffff;}
+
+/* WA FLOAT */
+.wa{position:fixed;bottom:28px;right:28px;z-index:9999;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.25s;}
+.wa:hover{transform:scale(1.1) translateY(-2px);}
+.wa::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;animation:ring 2.5s ease-out 2s infinite;}
+@keyframes ring{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.8);opacity:0}}
+
+@media(max-width:960px){
+  .wrap{padding:0 20px;}
+  .nav-in{padding:0 20px;}
+  .proj-grid{grid-template-columns:1fr;}
+  .what-grid{grid-template-columns:1fr 1fr;}
+  .hero{padding:52px 0 40px;}
+  .hero-stats{gap:20px;}
+  footer{flex-direction:column;gap:10px;text-align:center;padding:24px 20px;}
+  .cta-strip{padding:48px 20px;}
+}
+
+/* ── NAV LINKS (service pages) ─────── */
+.nav-links{display:flex;gap:30px;list-style:none;}
+.nav-links a{font-size:13px;color:#ffffff;text-decoration:none;padding:6px 2px;position:relative;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,#6366f1,#8b5cf6);border-radius:100px;transition:width 0.3s ease;}
+.nav-links a:hover{color:#818cf8;}
+.nav-links a:hover::after{width:100%;}
+
+/* ── FOOTER (service pages) ────────── */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:52px 52px 28px;}
+.ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid var(--border);margin-bottom:24px;}
+.ft-brand{font-family:var(--fh);font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.5px;margin-bottom:10px;}
+.ft-brand span{color:var(--indigo2);}
+.ft-desc{font-size:12px;color:#ffffff;line-height:1.7;margin-bottom:16px;max-width:240px;}
+.ft-contacts{display:flex;flex-direction:column;gap:8px;}
+.ft-clink{display:flex;align-items:center;gap:9px;font-size:12px;color:#ffffff;text-decoration:none;transition:color 0.2s;}
+.ft-clink:hover{color:var(--indigo2);}
+.ft-clink-icon{width:28px;height:28px;border-radius:7px;background:var(--isoft);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;}
+.ft-col h5{font-size:9px;color:#ffffff;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:16px;}
+.ft-col a{display:block;font-size:13px;color:#ffffff;text-decoration:none;margin-bottom:10px;transition:all 0.2s;padding:2px 0;}
+.ft-col a:hover{color:var(--indigo2);padding-left:4px;}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.ft-copy{font-size:11px;color:#ffffff;}
+.ft-soc{display:flex;gap:8px;}
+.ft-soc-link{width:38px;height:38px;border-radius:9px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.25);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.2s;}
+.ft-soc-link:hover{background:rgba(99,102,241,0.2);border-color:var(--indigo);transform:translateY(-2px);}
+
+@media(max-width:960px){
+  .nav-links{display:none;}
+  .nav-in{padding:0 20px;}
+  .ft-top{grid-template-columns:1fr 1fr !important;gap:20px !important;}
+  footer{padding:32px 20px 20px;}
+  .ft-soc{gap:6px;}
+}
+@media(max-width:600px){
+  .ft-top{grid-template-columns:1fr 1fr !important;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ SHARED HEADER (header.html) ═══ -->
+<div id="site-header"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="label">Web Development</div>
+    <h1>Websites that work.<br><em>Stores that sell.</em></h1>
+    <p>We build fast, beautiful, conversion-ready websites — WordPress, Shopify, custom — for businesses ready to dominate online.</p>
+
+    <div class="hero-stats">
+      <div class="hs"><div class="hs-n">59<em>+</em></div><div class="hs-l">Projects delivered</div></div>
+      <div class="hs"><div class="hs-n">5<em>+</em></div><div class="hs-l">Years experience</div></div>
+      <div class="hs"><div class="hs-n">4.8<em>★</em></div><div class="hs-l">Client rating</div></div>
+      <div class="hs"><div class="hs-n" style="font-size:20px;">UK<em>+US</em></div><div class="hs-l">Global clients</div></div>
+    </div>
+
+    <div class="hero-tags">
+      <span class="htag">WordPress</span>
+      <span class="htag">Shopify</span>
+      <span class="htag">Custom HTML/CSS</span>
+      <span class="htag">WooCommerce</span>
+      <span class="htag">UI/UX Design</span>
+      <span class="htag">Speed Optimization</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE BUILD -->
+<div class="what-section">
+  <div class="wrap">
+    <div class="label">What we build</div>
+    <h2 style="font-family:var(--fh);font-size:clamp(26px,3vw,40px);font-weight:600;color:#fff;letter-spacing:-0.5px;margin-top:8px;">Every type of web project.</h2>
+    <div class="what-grid">
+      <div class="wc"><div class="wc-icon">🏢</div><h4>Business Websites</h4><p>Professional multi-page sites that build trust and generate leads for your brand.</p></div>
+      <div class="wc"><div class="wc-icon">🛒</div><h4>eCommerce Stores</h4><p>Shopify & WooCommerce stores with payment gateways, product pages, and high conversions.</p></div>
+      <div class="wc"><div class="wc-icon">🏥</div><h4>Healthcare & Clinics</h4><p>HIPAA-aware, professional websites for medical practices and healthcare providers.</p></div>
+      <div class="wc"><div class="wc-icon">🏠</div><h4>Real Estate</h4><p>Property listing sites with search, filters, maps, and lead capture forms.</p></div>
+      <div class="wc"><div class="wc-icon">🎨</div><h4>Portfolio & Agency</h4><p>Creative, modern portfolios and agency websites that win clients at first glance.</p></div>
+      <div class="wc"><div class="wc-icon">📰</div><h4>News & Media</h4><p>Fast-loading news portals, blogs, and content platforms built for scale.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">Featured Projects</div>
+      <h2>Real work. Real results.</h2>
+      <p>Two of our most recent web development projects — live and generating results for our clients.</p>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- Project 1: Karvaan Tours -->
+      <a href="https://www.karvaantours.com/" target="_blank" class="proj-card">
+        <div class="proj-thumb">
+          <img
+            src="https://api.screenshotone.com/take?url=karvaantours.com&viewport_width=1280&viewport_height=800&device_scale_factor=1&format=jpg&image_quality=80&block_ads=true&block_cookie_banners=true&delay=2&timeout=30&access_key=MkQGFhDv5iSRQg"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800&h=500&fit=crop';"
+            alt="Karvaan Tours Website"
+            loading="lazy"
+          >
+          <div class="proj-thumb-overlay"></div>
+          <div class="proj-visit">Visit Site ↗</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-tags-row">
+            <span class="proj-tag">Travel & Tourism</span>
+            <span class="proj-tag">WordPress</span>
+            <span class="proj-tag">Custom Design</span>
+          </div>
+          <div class="proj-title">Karvaan Tours</div>
+          <div class="proj-desc">A fully custom WordPress website for a travel agency — featuring tour packages, destination pages, booking enquiry forms, and a modern UI optimized for conversions.</div>
+          <div class="proj-chips">
+            <span class="proj-chip">WordPress</span>
+            <span class="proj-chip">Elementor Pro</span>
+            <span class="proj-chip">SEO Optimized</span>
+            <span class="proj-chip">Mobile Responsive</span>
+            <span class="proj-chip">Speed Optimized</span>
+          </div>
+          <span class="proj-link">View live site ↗</span>
+        </div>
+      </a>
+
+      <!-- Project 2: PickPackPro -->
+      <a href="https://pickpackpro.co.uk/" target="_blank" class="proj-card">
+        <div class="proj-thumb">
+          <img
+            src="https://api.screenshotone.com/take?url=pickpackpro.co.uk&viewport_width=1280&viewport_height=800&device_scale_factor=1&format=jpg&image_quality=80&block_ads=true&block_cookie_banners=true&delay=2&timeout=30&access_key=MkQGFhDv5iSRQg"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=500&fit=crop';"
+            alt="PickPackPro Website"
+            loading="lazy"
+          >
+          <div class="proj-thumb-overlay"></div>
+          <div class="proj-visit">Visit Site ↗</div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-tags-row">
+            <span class="proj-tag">Logistics & Fulfilment</span>
+            <span class="proj-tag">WordPress</span>
+            <span class="proj-tag">UK Business</span>
+          </div>
+          <div class="proj-title">PickPackPro UK</div>
+          <div class="proj-desc">A professional UK-based logistics and fulfilment company website — clean corporate design, service pages, pricing section, and lead generation forms built for conversions.</div>
+          <div class="proj-chips">
+            <span class="proj-chip">WordPress</span>
+            <span class="proj-chip">Custom Theme</span>
+            <span class="proj-chip">Lead Generation</span>
+            <span class="proj-chip">UK Market</span>
+            <span class="proj-chip">Fast Load</span>
+          </div>
+          <span class="proj-link">View live site ↗</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h2>Need a website like these?</h2>
+  <p>Get a free consultation — tell us your idea and we'll build it.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/923342651544" target="_blank" class="btn-wa">
+      <svg width="16" height="16" viewBox="0 0 48 48" fill="white"><path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.1 1.6 1.6-5.9-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.5.7-.8.2-.3.3-.5.4-.8.2-.3 0-.6-.1-.8-.1-.2-1-2.5-1.4-3.4-.4-.9-.7-.8-1-.8h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.2.4-1.1.4-2 .3-2.2-.2-.3-.5-.4-1-.6z"/></svg>
+      WhatsApp us now
+    </a>
+    <a href="index.html#packages" class="btn-ghost">View packages</a>
+  </div>
+</div>
+
+<!-- ═══ SHARED FOOTER (footer.html) ═══ -->
+<div id="site-footer"></div>
+
+<script src="header-footer-loader.js"></script>
+
+</body>
+</html>

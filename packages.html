@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packages & Pricing — Rathisoft</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%234f46e5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='38' font-weight='700' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#13131a;--bg2:#1c1c27;--bg3:#22222f;--card:#1e1e2d;--indigo:#6366f1;--indigo2:#818cf8;--indigo3:#4f46e5;--iglow:rgba(99,102,241,0.18);--isoft:rgba(99,102,241,0.08);--border:rgba(255,255,255,0.07);--border2:rgba(99,102,241,0.3);--white:#fff;--g1:#ffffff;--g2:#ffffff;--g3:#ffffff;--g4:#ffffff;--gold:#f59e0b;--fh:'Bricolage Grotesque',sans-serif;--fb:'Inter',sans-serif;--r2:18px;--r3:24px;--sh2:0 8px 40px rgba(0,0,0,0.35);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--fb);background:var(--bg);color:#ffffff;-webkit-font-smoothing:antialiased;}
+h1{font-family:var(--fh);font-size:clamp(44px,5.5vw,76px);font-weight:700;line-height:1.05;letter-spacing:-2px;color:var(--white);}
+h2{font-family:var(--fh);font-size:clamp(26px,3vw,42px);font-weight:600;color:var(--white);letter-spacing:-0.5px;}
+h3{font-family:var(--fh);font-size:19px;font-weight:600;color:var(--white);}
+p{line-height:1.8;font-weight:300;color:#ffffff;}
+a{text-decoration:none;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 52px;}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--indigo2);margin-bottom:14px;}
+.label::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,var(--indigo),transparent);}
+nav{position:sticky;top:0;z-index:500;background:rgba(19,19,26,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 52px;}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-box{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--indigo),var(--indigo3));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:19px;font-weight:700;color:#fff;box-shadow:0 0 16px var(--iglow);}
+.logo-text{font-family:var(--fh);font-size:20px;font-weight:700;color:var(--white);letter-spacing:-0.5px;}
+.logo-text span{color:var(--indigo2);}
+.nav-links{display:flex;gap:30px;list-style:none;}
+.nav-links a{font-size:13px;color:#ffffff;text-decoration:none;padding:6px 2px;position:relative;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,#6366f1,#8b5cf6);border-radius:100px;transition:width 0.3s ease;}
+.nav-links a:hover{color:#818cf8;}
+.nav-links a:hover::after{width:100%;}
+.nav-btn{background:var(--indigo);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:500;font-family:var(--fb);cursor:pointer;text-decoration:none;transition:all 0.2s;}
+.nav-btn:hover{background:var(--indigo3);transform:translateY(-1px);}
+
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--bg),var(--bg2));position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;left:-80px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.07) 0%,transparent 65%);pointer-events:none;}
+.hero .wrap{position:relative;z-index:1;}
+.hero p{font-size:16px;margin-top:12px;max-width:520px;}
+
+.pkg-section{padding:64px 0 80px;}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
+.pkg{border:1px solid var(--border);border-radius:var(--r3);padding:40px 30px;background:var(--card);display:flex;flex-direction:column;transition:all 0.3s;cursor:default;}
+.pkg:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:var(--sh2);}
+.pkg.featured{background:linear-gradient(145deg,#1a1a2e,var(--indigo3));border-color:var(--indigo);box-shadow:0 0 0 1px rgba(99,102,241,0.3),0 20px 60px rgba(99,102,241,0.2);}
+.pkg.featured:hover{transform:translateY(-6px);box-shadow:0 0 0 1px rgba(99,102,241,0.4),0 28px 72px rgba(99,102,241,0.3);}
+.pkg-pop{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:6px;margin-bottom:16px;}
+.pkg-pop::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);}
+.pkg-tier{font-size:11px;color:#ffffff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+.pkg-price{font-family:var(--fh);font-size:52px;font-weight:700;letter-spacing:-2px;line-height:1;color:var(--white);margin-bottom:4px;}
+.pkg-price sub{font-size:15px;font-weight:300;color:#ffffff;letter-spacing:0;}
+.pkg-cd{font-size:12px;color:#ffffff;margin-bottom:28px;}
+.pkg-div{border:none;border-top:1px solid var(--border);margin-bottom:22px;}
+.pkg.featured .pkg-div{border-color:#ffffff;}
+.pkg-feat{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:#ffffff;padding:6px 0;font-weight:300;}
+.pkg.featured .pkg-feat{color:#ffffff;}
+.pkg-ck{color:var(--indigo2);flex-shrink:0;font-size:12px;line-height:1.6;}
+.pkg.featured .pkg-ck{color:var(--gold);}
+.pkg-sp{flex:1;}
+.pkg-btn{width:100%;margin-top:28px;padding:14px;border-radius:10px;font-size:13px;font-weight:500;font-family:var(--fb);cursor:pointer;transition:all 0.25s;}
+.pkg-btn-ind{background:var(--indigo);color:#fff;border:none;box-shadow:0 4px 20px var(--iglow);}
+.pkg-btn-ind:hover{background:var(--indigo3);transform:translateY(-1px);}
+.pkg-btn-ghost{background:transparent;color:#ffffff;border:1px solid var(--border);}
+.pkg-btn-ghost:hover{border-color:var(--border2);color:var(--white);}
+.pkg-btn-white{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.2);}
+.pkg-btn-white:hover{background:rgba(255,255,255,0.2);transform:translateY(-1px);}
+.pkg-note{text-align:center;font-size:13px;color:#ffffff;margin-top:20px;}
+.urgency{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--isoft);border:1px solid var(--border2);border-radius:12px;padding:14px;margin-top:16px;font-size:12px;color:var(--indigo2);}
+.udot{width:6px;height:6px;border-radius:50%;background:var(--indigo2);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* FAQ */
+.faq{padding:0 0 80px;}
+.faq h2{margin-bottom:36px;}
+.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;transition:border-color 0.2s;}
+.faq-item:hover{border-color:var(--border2);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:14px;color:#ffffff;font-weight:500;}
+.faq-q::after{content:'↓';color:var(--indigo2);font-size:16px;transition:transform 0.2s;}
+.faq-item.open .faq-q::after{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 22px 18px;font-size:13px;color:#ffffff;line-height:1.75;}
+.faq-item.open .faq-a{display:block;}
+
+.cta-wrap{background:var(--bg2);border-top:1px solid var(--border);padding:72px 52px;text-align:center;}
+.cta-wrap h2{margin-bottom:12px;}
+.cta-wrap p{color:#ffffff;font-size:15px;margin-bottom:32px;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--indigo);color:#fff;padding:14px 28px;border-radius:10px;font-size:13px;font-weight:500;font-family:var(--fb);transition:all 0.25s;box-shadow:0 4px 20px var(--iglow);}
+.btn-p:hover{background:var(--indigo3);transform:translateY(-2px);}
+.btn-g{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:14px 24px;border-radius:10px;font-size:13px;font-weight:500;font-family:var(--fb);transition:all 0.25s;}
+.btn-g:hover{background:#20bf5d;transform:translateY(-2px);}
+
+footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 52px 22px;}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.ft-copy{font-size:11px;color:#fff;}
+.ft-soc{display:flex;gap:8px;}
+.ft-sl{width:46px;height:46px;border-radius:11px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;transition:all 0.25s;color:#ffffff;}
+.ft-sl:hover{border-color:var(--border2);background:var(--isoft);color:var(--indigo2);transform:translateY(-2px);}
+
+.wa{position:fixed;bottom:28px;right:28px;z-index:9999;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.25s;}
+.wa:hover{transform:scale(1.1) translateY(-2px);}
+.wa::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;animation:ring 2.5s ease-out 2s infinite;}
+@keyframes ring{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.8);opacity:0}}
+
+@media(max-width:960px){.nav-links{display:none;}.nav-in,.cta-wrap,.wrap,footer{padding-left:24px;padding-right:24px;}.pkg-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<!-- ═══ SHARED HEADER (header.html) ═══ -->
+<div id="site-header"></div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="label">Pricing</div>
+    <h1>Simple packages.<br>No surprises.</h1>
+    <p>Pick the plan that fits your business. Everything included — design, development, and strategy. No hidden fees, ever.</p>
+  </div>
+</div>
+
+<div class="wrap pkg-section">
+  <div class="pkg-grid">
+    <div class="pkg">
+      <div class="pkg-tier">Basic Presence</div>
+      <div class="pkg-price">$99<sub>–$198</sub></div>
+      <div class="pkg-cd">⏱ 3–5 Days &nbsp;·&nbsp; Best for startups & portfolios</div>
+      <hr class="pkg-div">
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Professional One-Page Landing Design</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Fully Responsive (Mobile, Tablet, Desktop)</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Contact Form Integration</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Social Media Linking</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Speed Optimization (Basic)</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>1 Month Free Post-Launch Support</div>
+      <div class="pkg-sp"></div>
+      <button class="pkg-btn pkg-btn-ghost" onclick="window.open('https://wa.me/923342651544','_blank')">Get started</button>
+    </div>
+    <div class="pkg featured">
+      <div class="pkg-pop">Most popular</div>
+      <div class="pkg-tier">Business Growth</div>
+      <div class="pkg-price">$199<sub>–$298</sub></div>
+      <div class="pkg-cd">⏱ 7–12 Days &nbsp;·&nbsp; Best for established businesses</div>
+      <hr class="pkg-div">
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Up to 5–7 Custom Pages (Home, About, Services…)</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Modern UI/UX with Custom Graphics</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>SEO Friendly Structure</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>WhatsApp Chat Integration</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>CMS Access (Manage your own content)</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>1 Month Priority Support + Basic Security Setup</div>
+      <div class="pkg-sp"></div>
+      <button class="pkg-btn pkg-btn-white" onclick="window.open('https://wa.me/923342651544','_blank')">Get started →</button>
+    </div>
+    <div class="pkg">
+      <div class="pkg-tier">Enterprise Elite</div>
+      <div class="pkg-price">$299<sub>–$399</sub></div>
+      <div class="pkg-cd">⏱ 15–25 Days &nbsp;·&nbsp; Best for E-commerce & complex apps</div>
+      <hr class="pkg-div">
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Unlimited Pages / Full E-commerce Setup</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Payment Gateway (Stripe, PayPal, etc.)</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Custom Functionalities (Dashboards, Booking…)</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>Premium Speed & Performance Optimization</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>NDA Protection for Code & Data</div>
+      <div class="pkg-feat"><span class="pkg-ck">✦</span>1 Month Full Technical Support + Daily Backups</div>
+      <div class="pkg-sp"></div>
+      <button class="pkg-btn pkg-btn-ind" onclick="window.open('https://wa.me/923342651544','_blank')">Get started</button>
+    </div>
+  </div>
+  <p class="pkg-note">Not sure which plan fits? Message on WhatsApp — I'll recommend the right one for you.</p>
+  <div class="urgency"><span class="udot"></span>Currently accepting 3 new monthly clients — spots filling fast</div>
+
+  <!-- FAQ -->
+  <div class="faq" style="margin-top:72px;">
+    <h2>Frequently asked questions.</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggle(this)">What's included in the price?</div><div class="faq-a">Everything listed in the package — design, development, testing, and post-launch support. No hidden charges.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggle(this)">How do I get started?</div><div class="faq-a">Simply WhatsApp me or fill the contact form. We'll discuss your requirements and I'll recommend the best package for you.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggle(this)">Do you offer custom quotes?</div><div class="faq-a">Yes! If your project falls outside these packages, I can provide a custom quote based on your specific needs.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggle(this)">What payment methods do you accept?</div><div class="faq-a">PayPal, bank transfer, and other methods can be arranged. 50% upfront, 50% on delivery.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggle(this)">Do you provide ongoing support after launch?</div><div class="faq-a">Yes — every package includes 1 month of post-launch support. Extended support plans are also available.</div></div>
+  </div>
+</div>
+
+<div class="cta-wrap">
+  <h2>Still have questions?</h2>
+  <p>Just message me on WhatsApp — I'll get back to you within 24 hours.</p>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-p">Send a message →</a>
+    <a href="https://wa.me/923342651544" target="_blank" class="btn-g">💬 WhatsApp now</a>
+  </div>
+</div>
+
+<!-- ═══ SHARED FOOTER (footer.html) ═══ -->
+<div id="site-footer"></div>
+
+<script>
+function toggle(el){const item=el.parentElement;item.classList.toggle('open');}
+</script>
+<script src="header-footer-loader.js"></script>
+
+</body>
+</html>

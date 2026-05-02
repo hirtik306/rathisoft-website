@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — Rathisoft</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%234f46e5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='38' font-weight='700' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#13131a;--bg2:#1c1c27;--bg3:#22222f;--card:#1e1e2d;--indigo:#6366f1;--indigo2:#818cf8;--indigo3:#4f46e5;--iglow:rgba(99,102,241,0.18);--isoft:rgba(99,102,241,0.08);--border:rgba(255,255,255,0.07);--border2:rgba(99,102,241,0.3);--white:#fff;--gold:#f59e0b;--fh:'Bricolage Grotesque',sans-serif;--fb:'Inter',sans-serif;--r2:18px;--sh2:0 8px 40px rgba(0,0,0,0.35);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--fb);background:var(--bg);color:#ffffff;-webkit-font-smoothing:antialiased;}
+h1{font-family:var(--fh);font-size:clamp(44px,5.5vw,76px);font-weight:700;line-height:1.05;letter-spacing:-2px;color:var(--white);}
+h2{font-family:var(--fh);font-size:clamp(26px,3vw,40px);font-weight:600;color:var(--white);letter-spacing:-0.5px;}
+p{line-height:1.8;font-weight:300;color:#ffffff;}
+a{text-decoration:none;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 52px;}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--indigo2);margin-bottom:14px;}
+.label::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,var(--indigo),transparent);}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:500;background:rgba(19,19,26,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 52px;}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-box{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--indigo),var(--indigo3));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:19px;font-weight:700;color:#fff;box-shadow:0 0 16px var(--iglow);}
+.logo-text{font-family:var(--fh);font-size:20px;font-weight:700;color:var(--white);letter-spacing:-0.5px;}
+.logo-text span{color:var(--indigo2);}
+.nav-links{display:flex;gap:30px;list-style:none;}
+.nav-links a{font-size:13px;color:#ffffff;text-decoration:none;padding:6px 2px;position:relative;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,#6366f1,#8b5cf6);border-radius:100px;transition:width 0.3s ease;}
+.nav-links a:hover{color:#818cf8;}
+.nav-links a:hover::after{width:100%;}
+.nav-btn{background:var(--indigo);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:500;font-family:var(--fb);cursor:pointer;text-decoration:none;transition:all 0.2s;}
+.nav-btn:hover{background:var(--indigo3);transform:translateY(-1px);}
+
+/* HERO */
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--bg),var(--bg2));position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-80px;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.07) 0%,transparent 65%);pointer-events:none;}
+.hero .wrap{position:relative;z-index:1;}
+.hero p{font-size:16px;margin-top:12px;max-width:520px;}
+
+/* STATS BAR */
+.stats-bar{display:flex;gap:40px;flex-wrap:wrap;margin-top:40px;padding-top:36px;border-top:1px solid var(--border);}
+.stat{display:flex;flex-direction:column;gap:4px;}
+.stat-num{font-family:var(--fh);font-size:28px;font-weight:700;color:var(--indigo2);}
+.stat-label{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;}
+
+/* FILTERS */
+.filters-wrap{padding:40px 0 0;}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px;}
+.fb-btn{font-size:12px;font-weight:500;padding:8px 20px;border-radius:100px;border:1px solid var(--border);background:transparent;color:#ffffff;cursor:pointer;font-family:var(--fb);transition:all 0.2s;}
+.fb-btn:hover,.fb-btn.active{background:var(--isoft);border-color:var(--border2);color:var(--indigo2);}
+
+/* SECTION LABEL */
+.section-label{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--indigo2);padding:24px 0 16px;border-top:1px solid var(--border);margin-top:8px;display:flex;align-items:center;gap:10px;}
+.section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent);}
+
+/* GRID */
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:24px;}
+
+/* CARD */
+.pc{border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;background:var(--card);transition:all 0.3s;position:relative;}
+.pc a.card-link{display:block;text-decoration:none;color:inherit;}
+.pc:hover{border-color:var(--border2);transform:translateY(-5px);box-shadow:var(--sh2);}
+
+/* THUMBNAIL — screenshot via Google favicon service */
+.pc-thumb{height:200px;position:relative;overflow:hidden;background:#181825;}
+.pc-thumb img.screenshot{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform 0.5s ease;}
+.pc:hover .pc-thumb img.screenshot{transform:scale(1.04);}
+.pc-thumb .overlay{position:absolute;inset:0;background:rgba(99,102,241,0.85);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;font-size:12px;font-weight:600;letter-spacing:1.5px;color:#fff;gap:6px;}
+.pc:hover .pc-thumb .overlay{opacity:1;}
+
+/* EMOJI FALLBACK THUMB */
+.pc-thumb.emoji-thumb{display:flex;align-items:center;justify-content:center;font-size:52px;}
+.pc-thumb.emoji-thumb::after{content:'View Project ↗';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(99,102,241,0.9);color:#fff;font-family:var(--fb);font-size:12px;font-weight:500;letter-spacing:1.5px;opacity:0;transition:opacity 0.3s;}
+.pc:hover .pc-thumb.emoji-thumb::after{opacity:1;}
+
+/* TAGS */
+.pc-info{padding:16px 18px 18px;border-top:1px solid var(--border);}
+.pc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;}
+.tag{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:100px;border:1px solid;}
+.tag-wp{color:#4e9ef5;border-color:rgba(78,158,245,0.3);background:rgba(78,158,245,0.07);}
+.tag-shopify{color:#96bf48;border-color:rgba(150,191,72,0.3);background:rgba(150,191,72,0.07);}
+.tag-custom{color:#f59e0b;border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.07);}
+.tag-uiux{color:#e879f9;border-color:rgba(232,121,249,0.3);background:rgba(232,121,249,0.07);}
+.tag-ai{color:#34d399;border-color:rgba(52,211,153,0.3);background:rgba(52,211,153,0.07);}
+.tag-seo{color:#fb923c;border-color:rgba(251,146,60,0.3);background:rgba(251,146,60,0.07);}
+.tag-ecom{color:#f472b6;border-color:rgba(244,114,182,0.3);background:rgba(244,114,182,0.07);}
+
+.pc-name{font-size:15px;color:#ffffff;font-weight:600;font-family:var(--fh);margin-bottom:5px;}
+.pc-desc{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;}
+.pc-url{font-size:10px;color:var(--indigo2);margin-top:8px;display:inline-flex;align-items:center;gap:4px;opacity:0.7;}
+.pc-url svg{width:9px;height:9px;}
+
+/* HIDDEN */
+.pc[style*="display: none"]{display:none!important;}
+
+/* CTA */
+.cta{background:var(--bg2);border-top:1px solid var(--border);padding:72px 52px;text-align:center;}
+.cta h2{margin-bottom:12px;}
+.cta p{color:#ffffff;font-size:15px;margin-bottom:32px;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--indigo);color:#fff;padding:14px 28px;border-radius:10px;font-size:13px;font-weight:500;font-family:var(--fb);transition:all 0.25s;box-shadow:0 4px 20px var(--iglow);}
+.btn-p:hover{background:var(--indigo3);transform:translateY(-2px);}
+.btn-g{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:14px 24px;border-radius:10px;font-size:13px;font-weight:500;font-family:var(--fb);transition:all 0.25s;}
+.btn-g:hover{background:#20bf5d;transform:translateY(-2px);}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 52px 22px;}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.ft-copy{font-size:11px;color:#fff;}
+.ft-soc{display:flex;gap:8px;}
+.ft-sl{width:46px;height:46px;border-radius:11px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;transition:all 0.25s;color:#ffffff;}
+.ft-sl:hover{border-color:var(--border2);background:var(--isoft);color:var(--indigo2);transform:translateY(-2px);}
+
+/* WHATSAPP FLOAT */
+.wa{position:fixed;bottom:28px;right:28px;z-index:9999;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.25s;}
+.wa:hover{transform:scale(1.1) translateY(-2px);}
+.wa::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;animation:ring 2.5s ease-out 2s infinite;}
+@keyframes ring{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.8);opacity:0}}
+
+/* RESPONSIVE */
+@media(max-width:960px){.nav-links{display:none;}.nav-in,.cta,.wrap,footer{padding-left:24px;padding-right:24px;}.port-grid{grid-template-columns:1fr 1fr;}.stats-bar{gap:16px;flex-wrap:nowrap;}.stat{flex:1;min-width:0;}.stat-num{font-size:22px;}.stat-label{font-size:9px;}}
+@media(max-width:600px){.port-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- ═══ SHARED HEADER (header.html) ═══ -->
+<div id="site-header"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="label">Our Work</div>
+    <h1>Work that wins clients.</h1>
+    <p>Real projects. Real results. Custom web deployments, WordPress, Shopify, UI/UX, and AI automation — worldwide.</p>
+    <div class="stats-bar">
+      <div class="stat"><span class="stat-num">27+</span><span class="stat-label">Projects Delivered</span></div>
+      <div class="stat"><span class="stat-num">9+</span><span class="stat-label">Service Categories</span></div>
+      <div class="stat"><span class="stat-num">🌍</span><span class="stat-label">Clients Worldwide</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTERS + GRID -->
+<div class="wrap filters-wrap">
+  <div class="filters">
+    <button class="fb-btn active" onclick="filterProjects(this,'all')">All Projects</button>
+    <button class="fb-btn" onclick="filterProjects(this,'custom')">Custom Web</button>
+    <button class="fb-btn" onclick="filterProjects(this,'wordpress')">WordPress</button>
+    <button class="fb-btn" onclick="filterProjects(this,'shopify')">Shopify</button>
+    <button class="fb-btn" onclick="filterProjects(this,'uiux')">UI/UX</button>
+    <!-- <button class="fb-btn" onclick="filterProjects(this,'ai')">AI & Automation</button> -->
+    <button class="fb-btn" onclick="filterProjects(this,'graphics')">Graphics Designing</button>
+    <button class="fb-btn" onclick="filterProjects(this,'video-editing')">Video Editing</button>
+    <button class="fb-btn" onclick="filterProjects(this,'seo')">SEO</button>
+  </div>
+
+  <!-- CUSTOM WEB -->
+  <div class="section-label" id="section-custom">Custom Web Deployments</div>
+  <div class="port-grid" id="grid-custom">
+
+    <div class="pc" data-cat="custom">
+      <a class="card-link" href="https://www.karvaantours.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="images/karvaantours.jpg" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=Karvaan+Tours'" alt="Karvaan Tours">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-ecom">Tours</span></div>
+          <div class="pc-name">Karvaan Tours</div>
+          <div class="pc-desc">Full travel & tours website with booking flows, destinations, and custom design.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>karvaantours.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="custom">
+      <a class="card-link" href="https://ticket-barter.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://ticket-barter.com/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=Ticket+Barter'" alt="Ticket Barter">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-ecom">Marketplace</span></div>
+          <div class="pc-name">Ticket Barter</div>
+          <div class="pc-desc">Ticket trading & marketplace platform with custom frontend and transaction flows.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>ticket-barter.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="custom">
+      <a class="card-link" href="https://www.medial.au" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://www.medial.au&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=Medial+AI'" alt="Medial">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-ai">AI SaaS</span></div>
+          <div class="pc-name">Medial.au</div>
+          <div class="pc-desc">AI-powered accounting SaaS platform. Analyze & manage accounting data with powerful AI.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>medial.au</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="custom ai">
+      <a class="card-link" href="https://montek-creative.vercel.app/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://montek-creative.vercel.app/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=Montek+Creative'" alt="Montek Creative">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-ai  ">Creative</span></div>
+          <div class="pc-name">Montek Creative</div>
+          <div class="pc-desc">Creative agency portfolio with modern design and smooth interactions.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>montek-creative.vercel.app</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="custom">
+      <a class="card-link" href="https://www.urbansplatter.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://www.urbansplatter.com/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=Urban+Splatter'" alt="Urban Splatter">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-seo">Content</span></div>
+          <div class="pc-name">Urban Splatter</div>
+          <div class="pc-desc">High-traffic content & lifestyle website with custom web deployment and SEO optimization.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>urbansplatter.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="custom">
+      <a class="card-link" href="https://www.londondaily.news/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="images/londonDaily.png" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=London+Daily+News'" alt="London Daily News">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-seo">News</span></div>
+          <div class="pc-name">London Daily News</div>
+          <div class="pc-desc">Digital news publication with custom deployment, editorial layout, and fast performance.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>londondaily.news</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="custom">
+      <a class="card-link" href="https://pickpackpro.co.uk/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://pickpackpro.co.uk/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=PickPack+Pro'" alt="PickPack Pro">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-ecom">Logistics</span></div>
+          <div class="pc-name">PickPack Pro <span style="font-size:9px;color:var(--indigo2);font-weight:600;">★ Recent</span></div>
+          <div class="pc-desc">UK-based logistics & fulfilment services website with custom design and functionality.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>pickpackpro.co.uk</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="custom">
+      <a class="card-link" href="https://tripsadora.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="images/TripsAdora.jpg" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/6366f1?text=Tripsadora'" alt="Tripsadora">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-custom">Custom Web</span><span class="tag tag-ecom">Travel</span></div>
+          <div class="pc-name">Tripsadora</div>
+          <div class="pc-desc">Travel discovery platform with custom web deployment and dynamic destination pages.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>tripsadora.com</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- WORDPRESS -->
+  <div class="section-label" id="section-wordpress">WordPress Websites</div>
+  <div class="port-grid" id="grid-wordpress">
+
+    <div class="pc" data-cat="wordpress">
+      <a class="card-link" href="https://www.openpr.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="images/OpenPR.jpg" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/4e9ef5?text=OpenPR'" alt="OpenPR">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-wp">WordPress</span><span class="tag tag-seo">PR & News</span></div>
+          <div class="pc-name">OpenPR</div>
+          <div class="pc-desc">Press release distribution platform built on WordPress with high-volume content management.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>openpr.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="wordpress">
+      <a class="card-link" href="https://thedatascientist.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://thedatascientist.com/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/4e9ef5?text=The+Data+Scientist'" alt="The Data Scientist">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-wp">WordPress</span><span class="tag tag-ai">Tech</span></div>
+          <div class="pc-name">The Data Scientist</div>
+          <div class="pc-desc">Tech & data science publication built on WordPress with editorial layout and SEO structure.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>thedatascientist.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="wordpress">
+      <a class="card-link" href="https://souvenirhandicraft.online/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://souvenirhandicraft.online/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/4e9ef5?text=Souvenir+Handicraft'" alt="Souvenir Handicraft">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-wp">WordPress</span><span class="tag tag-ecom">eCommerce</span></div>
+          <div class="pc-name">Souvenir Handicraft <span style="font-size:9px;color:var(--indigo2);font-weight:600;">★ Recent</span></div>
+          <div class="pc-desc">Handicraft & souvenir store on WordPress with WooCommerce, product pages, and custom design.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>souvenirhandicraft.online</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="wordpress">
+      <a class="card-link" href="https://straightupinspections.com.au/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://straightupinspections.com.au/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/4e9ef5?text=Straight+Up+Inspections'" alt="Straight Up Inspections">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-wp">WordPress</span><span class="tag tag-custom">Services</span></div>
+          <div class="pc-name">Straight Up Inspections</div>
+          <div class="pc-desc">Australian property inspection services website with booking forms and custom WordPress build.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>straightupinspections.com.au</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- SHOPIFY -->
+  <div class="section-label" id="section-shopify">Shopify Stores</div>
+  <div class="port-grid" id="grid-shopify">
+
+    <div class="pc" data-cat="shopify">
+      <a class="card-link" href="https://smithhonig.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://smithhonig.com/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/96bf48?text=Smith+Honig'" alt="Smith Honig">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-shopify">Shopify</span><span class="tag tag-ecom">Fashion</span></div>
+          <div class="pc-name">Smith Honig</div>
+          <div class="pc-desc">Premium fashion Shopify store with custom theme, product pages, and payment integration.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>smithhonig.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="shopify">
+      <a class="card-link" href="https://insta-mart.co.uk/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://insta-mart.co.uk/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/96bf48?text=Insta+Mart'" alt="Insta Mart">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-shopify">Shopify</span><span class="tag tag-ecom">Grocery</span></div>
+          <div class="pc-name">Insta-Mart UK</div>
+          <div class="pc-desc">UK grocery & convenience store on Shopify with fast checkout and inventory management.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>insta-mart.co.uk</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="shopify">
+      <a class="card-link" href="https://deseomarketing.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="images/deseomarketing.jpg" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/96bf48?text=Deseo+Marketing'" alt="Deseo Marketing">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-shopify">Shopify</span><span class="tag tag-ecom">Marketing</span></div>
+          <div class="pc-name">Deseo Marketing</div>
+          <div class="pc-desc">Marketing agency Shopify site with clean design, service showcasing, and lead generation.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>deseomarketing.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="shopify">
+      <a class="card-link" href="https://shopnudra.com/" target="_blank" rel="noopener">
+        <div class="pc-thumb">
+          <img class="screenshot" src="https://api.microlink.io/?url=https://shopnudra.com/&screenshot=true&meta=false&embed=screenshot.url" onerror="this.src='https://via.placeholder.com/600x200/1e1e2d/96bf48?text=Shop+Nudra'" alt="Shop Nudra">
+          <div class="overlay">View Live Site ↗</div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-shopify">Shopify</span><span class="tag tag-ecom">Lifestyle</span></div>
+          <div class="pc-name">Shop Nudra</div>
+          <div class="pc-desc">Lifestyle & apparel Shopify store with custom theme, collections, and seamless checkout.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>shopnudra.com</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+ <!-- Graphics Designing -->
+ <div class="section-label" id="section-graphics">Graphics Designing</div>
+ <div class="port-grid" id="grid-graphics">
+
+   <div class="pc" data-cat="graphics">
+     <a class="card-link" href="https://www.instagram.com/darachaharbagh?igsh=MTE3c3Q4aTlzMWk2Ng==" target="_blank" rel="noopener">
+       <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/deraDeveloper.jpg" onerror="this.src='https://www.instagram.com/darachaharbagh?igsh=MTE3c3Q4aTlzMWk2Ng=='" alt="Dara Chahar Bagh"></div>
+       <div class="pc-info">
+         <div class="pc-tags"><span class="tag tag-ai">Graphics</span><span class="tag tag-custom">Social</span></div>
+         <div class="pc-name">Urban Real Estate Showcase</div>
+         <div class="pc-desc">A professional suite of social media assets featuring clean typography and high-end architectural renders for luxury urban living.</div>
+         <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>instagram.com</div>
+       </div>
+     </a>
+   </div>
+
+   <div class="pc" data-cat="graphics">
+     <a class="card-link" href="https://www.instagram.com/digiladderpk?igsh=MWJ1MHYwMjFnbGM4dw==" target="_blank" rel="noopener">
+       <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/digiladder.jpg" onerror="this.src='https://www.instagram.com/digiladderpk?igsh=MWJ1MHYwMjFnbGM4dw=='" alt="DigiLadder Marketing Portfolio"></div>
+       <div class="pc-info">
+         <div class="pc-tags"><span class="tag tag-ai">Graphics</span><span class="tag tag-custom">Growth</span></div>
+         <div class="pc-name">Modern Marketing Portfolio</div>
+         <div class="pc-desc">A bold, engaging collection of social media graphics focused on branding, digital growth, and creative strategy.</div>
+         <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>instagram.com</div>
+       </div>
+     </a>
+   </div>
+
+   <div class="pc" data-cat="graphics">
+     <a class="card-link" href="https://www.instagram.com/ikraharismalikoffical?igsh=MThpamJvc3IxNjEwNw==" target="_blank" rel="noopener">
+       <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/ikraHaris.jpg" onerror="this.src='https://www.instagram.com/ikraharismalikoffical?igsh=MThpamJvc3IxNjEwNw=='" alt="Elegant Ethnic Fashion"></div>
+       <div class="pc-info">
+         <div class="pc-tags"><span class="tag tag-ai">Graphics</span><span class="tag tag-custom">Brand</span></div>
+         <div class="pc-name">Elegant Ethnic Fashion</div>
+         <div class="pc-desc">A sophisticated showcase of traditional wear photography and social media design, blending luxury aesthetics with cultural elegance.</div>
+         <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>instagram.com</div>
+       </div>
+     </a>
+   </div>
+   <div class="pc" data-cat="graphics">
+    <a class="card-link" href="https://www.instagram.com/karvaantours/?hl=en" target="_blank" rel="noopener">
+      <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/karvaantourssocialmedia.jpg" onerror="this.src='https://www.instagram.com/karvaantours/?hl=en'" alt="Karvaan Tours Social Media"></div>
+      <div class="pc-info">
+        <div class="pc-tags"><span class="tag tag-ai">Graphics</span><span class="tag tag-custom">Brand</span></div>
+        <div class="pc-name">Global Travel Guide Graphics</div>
+        <div class="pc-desc">A vibrant collection of social media assets featuring scenic photography and elegant typography tailored for international tourism and cultural exploration.</div>
+        <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>instagram.com</div>
+      </div>
+    </a>
+  </div>
+
+ </div>
+  <!-- UI/UX -->
+  <div class="section-label" id="section-uiux">UI/UX Design</div>
+  <div class="port-grid" id="grid-uiux">
+
+    <div class="pc" data-cat="uiux">
+      <a class="card-link" href="https://www.figma.com/design/7oHf4FtxzhakOx1sele4Gq/Tech-Online-Store-Design?node-id=0-1&p=f" target="_blank" rel="noopener">
+        <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/techonlinestoredesign.jpg" onerror="this.src='https://www.figma.com/design/7oHf4FtxzhakOx1sele4Gq/Tech-Online-Store-Design?node-id=0-1&p=f'" alt="Tech Online Store Design">
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-uiux">UI/UX</span><span class="tag tag-custom">Figma</span></div>
+          <div class="pc-name">Tech Online Store UI Kit</div>
+          <div class="pc-desc">A sleek, full-flow Figma design system for a modern tech e-commerce experience. Built in Figma.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>figma.com — View Design</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="uiux">
+      <a class="card-link" href="https://www.figma.com/design/q3QRXfWXfOXk9encNClTpH/Well-Nest-Diagnosis?node-id=1-2679" target="_blank" rel="noopener">
+        <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/well nest.jpg" onerror="this.src='https://www.figma.com/design/q3QRXfWXfOXk9encNClTpH/Well-Nest-Diagnosis?node-id=1-2679'" alt="Well Nest Diagnosis UI">
+        </div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-uiux">UI/UX</span><span class="tag tag-custom">Prototype</span></div>
+          <div class="pc-name">Well Nest Diagnosis UI</div>
+          <div class="pc-desc">Interactive prototype with complete user flow, components, and polished visual design.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>figma.com — View Design</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="uiux">
+      <a class="card-link" href="https://www.figma.com/design/w7FpArCXnLbOtsDRko2aPw/Dalel-admin-panel?node-id=0-1&p=f" target="_blank" rel="noopener">
+        <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/dalelkuwait.jpg" onerror="this.src='https://www.figma.com/design/w7FpArCXnLbOtsDRko2aPw/Dalel-admin-panel?node-id=0-1&p=f'" alt="Dalel Admin Panel"></div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-uiux">UI/UX</span><span class="tag tag-custom">Design</span></div>
+          <div class="pc-name">Dalel Admin Panel</div>
+          <div class="pc-desc">A comprehensive dashboard ecosystem featuring user management, detailed analytics, and business configuration tools.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>figma.com — View Design</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="uiux">
+      <a class="card-link" href="https://www.figma.com/design/oRqAIzKRR9lVlAH0NBpFw8/Trips-Adora?node-id=4119-1781&p=f&t=Bcq4el3K5Jdsh88H-0" target="_blank" rel="noopener">
+        <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/tripsadora.jpg" onerror="this.src='https://www.figma.com/design/oRqAIzKRR9lVlAH0NBpFw8/Trips-Adora?node-id=4119-1781&p=f&t=Bcq4el3K5Jdsh88H-0'" alt="Trips Adora UI"></div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-uiux">UI/UX</span><span class="tag tag-custom">Design</span></div>
+          <div class="pc-name">Trips Adora UI</div>
+          <div class="pc-desc">An extensive travel booking UI system featuring complex user flows for search, rewards, and multi-destination trip planning.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>figma.com — View Design</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="uiux">
+      <a class="card-link" href="https://www.figma.com/proto/oRqAIzKRR9lVlAH0NBpFw8/Trips-Adora?node-id=4119-2031&t=Bcq4el3K5Jdsh88H-0&scaling=min-zoom&content-scaling=fixed&page-id=4119%3A1781" target="_blank" rel="noopener">
+        <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/motorcar.jpg" onerror="this.src='https://www.figma.com/proto/oRqAIzKRR9lVlAH0NBpFw8/Trips-Adora?node-id=4119-2031&t=Bcq4el3K5Jdsh88H-0&scaling=min-zoom&content-scaling=fixed&page-id=4119%3A1781'" alt="Car Rental UI"></div>
+        <div class="pc-info">
+          <div class="pc-tags"><span class="tag tag-uiux">UI/UX</span><span class="tag tag-custom">Design</span></div>
+          <div class="pc-name">Car Rental UI</div>
+          <div class="pc-desc">A comprehensive Figma workspace for an automotive marketplace, featuring high-fidelity rental listings and seamless booking flows.</div>
+          <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>figma.com — View Design</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Video Editing -->
+  <div class="section-label" id="section-video-editing">Video Editing</div>
+  <div class="port-grid" id="grid-video-editing">
+
+    <div class="pc" data-cat="video-editing"><a class="card-link" href="https://www.youtube.com/watch?v=_CUuQvN3tl4" target="_blank" rel="noopener">
+      <div class="pc-thumb emoji-thumb"><img class="screenshot" src="https://img.youtube.com/vi/_CUuQvN3tl4/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/_CUuQvN3tl4/hqdefault.jpg'" alt="YouTube Thumbnail"></div>
+      <div class="pc-info"><div class="pc-tags"><span class="tag tag-video-editing">Video Editing</span><span class="tag tag-custom">Social</span></div>
+      <div class="pc-name">Colorful 3D Anime Girl Room Chaos</div>
+      <div class="pc-desc">A high-fidelity Figma showcase of dynamic data visualization and user-centric analytics design.</div>
+      <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+        <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>youtube.com</div></div>
+      </a>
+    </div>
+
+    <div class="pc" data-cat="video-editing"><a class="card-link" href="https://www.youtube.com/shorts/wGtUwJcUODs" target="_blank" rel="noopener"><div class="pc-thumb emoji-thumb"><img class="screenshot" src="https://img.youtube.com/vi/wGtUwJcUODs/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/wGtUwJcUODs/hqdefault.jpg'" alt="YouTube Thumbnail"></div><div class="pc-info"><div class="pc-tags"><span class="tag tag-video-editing">Video Editing</span><span class="tag tag-custom">Growth</span></div><div class="pc-name">3D Animated Boy & Puppy</div><div class="pc-desc">A breathtaking 3D cinematic exploration of surreal, hyper-realistic structures blending nature with high-tech design.</div><div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>youtube.com</div></div></a></div>
+
+    <div class="pc" data-cat="video-editing">
+      <a class="card-link" href="https://www.youtube.com/shorts/7W2sHCOSisA" target="_blank" rel="noopener">
+        <div class="pc-thumb emoji-thumb"><img class="screenshot" src="https://img.youtube.com/vi/7W2sHCOSisA/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/7W2sHCOSisA/hqdefault.jpg'" alt="YouTube Thumbnail"></div><div class="pc-info"><div class="pc-tags"><span class="tag tag-video-editing">Video Editing</span><span class="tag tag-custom">Brand</span></div>
+        <div class="pc-name">Scary Gorilla Attack Scene 3D Animation</div><div class="pc-desc">A gripping, high-intensity 3D sequence featuring a hyper-realistic gorilla encounter in a lush jungle setting.</div><div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>youtube.com</div></div></a></div>
+
+  </div>
+<!-- Search Engine Optimization -->
+<div class="section-label" id="section-SEO">Search Engine Optimization</div>
+<div class="port-grid" id="grid-SEO">
+
+  <div class="pc" data-cat="seo">
+    <a class="card-link" href="https://powerhousepilates.com/" target="_blank" rel="noopener">
+      <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/powerhouse.jpg" onerror="this.src='https://powerhousepilates.com/'" alt="Strategic SEO Growth for Health & Fitness Brand"></div>
+      <div class="pc-info">
+        <div class="pc-tags"><span class="tag tag-ai">SEO</span><span class="tag tag-custom">Organic Growth</span></div>
+        <div class="pc-name">Strategic SEO Growth for Health & Fitness Brand</div>
+        <div class="pc-desc">Boosted organic traffic to 1.7K monthly visitors through targeted keyword optimization and authority building.</div>
+        <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>powerhousepilates.com</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="pc" data-cat="seo">
+    <a class="card-link" href="https://charfen.co.uk/" target="_blank" rel="noopener">
+      <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/charfen.jpg" onerror="this.src='https://charfen.co.uk/'" alt="Scaling Organic Traffic for UK-Based E-Commerce"></div>
+      <div class="pc-info">
+        <div class="pc-tags"><span class="tag tag-ai">SEO</span><span class="tag tag-custom">Organic Growth</span></div>
+        <div class="pc-name">Scaling Organic Traffic for UK-Based E-Commerce</div>
+        <div class="pc-desc">Achieved 11.5K monthly organic sessions and managed a backlink profile of 27.4K for a competitive retail domain.</div>
+        <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>charfen.co.uk</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="pc" data-cat="seo">
+    <a class="card-link" href="https://www.the-qrcode-generator.com/" target="_blank" rel="noopener">
+      <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/QR_Generator.jpg" onerror="this.src='https://www.the-qrcode-generator.com/'" alt="Global SEO Management for SaaS Productivity Tools."></div>
+      <div class="pc-info">
+        <div class="pc-tags"><span class="tag tag-ai">SEO</span><span class="tag tag-custom">Organic Growth</span></div>
+        <div class="pc-name">Global SEO Management for SaaS Productivity Tools.</div>
+        <div class="pc-desc">Managed a high-authority domain with 1.5M monthly organic traffic and a massive 37.7K backlink portfolio.</div>
+        <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>the-qrcode-generator.com</div>
+      </div>
+    </a>
+  </div>
+  <div class="pc" data-cat="seo">
+   <a class="card-link" href="https://calculatethevat.co.uk/" target="_blank" rel="noopener">
+     <div class="pc-thumb emoji-thumb"><img class="screenshot" src="images/vatcalculator.jpg" onerror="this.src='https://calculatethevat.co.uk/'" alt="Off-Page SEO & Backlink Strategy for Financial Tools"></div>
+     <div class="pc-info">
+       <div class="pc-tags"><span class="tag tag-ai">SEO</span><span class="tag tag-custom">Organic Growth</span></div>
+       <div class="pc-name">Off-Page SEO & Backlink Strategy for Financial Tools</div>
+       <div class="pc-desc">A vibrant collection of social media assets featuring scenic photography and elegant typography tailored for international tourism and cultural exploration.</div>
+       <div class="pc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>calculatethevat.co.uk</div>
+     </div>
+   </a>
+ </div>
+
+</div>
+</div><!-- /.wrap -->
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Have a project in mind?</h2>
+  <p>Let's build something great together. Get a free quote today.</p>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-p">Start your project →</a>
+    <a href="https://wa.me/923342651544" target="_blank" class="btn-g">💬 WhatsApp us</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<!-- ═══ SHARED FOOTER (footer.html) ═══ -->
+<div id="site-footer"></div>
+
+<script>
+// Filter logic — works across all section grids
+function filterProjects(btn, cat) {
+  // Update active button
+  document.querySelectorAll('.fb-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const allCards = document.querySelectorAll('.pc');
+  const allSections = document.querySelectorAll('.section-label');
+  const allGrids = document.querySelectorAll('.port-grid');
+
+  if (cat === 'all') {
+    allCards.forEach(c => c.style.display = '');
+    allSections.forEach(s => s.style.display = '');
+    allGrids.forEach(g => g.style.display = '');
+    return;
+  }
+
+  allCards.forEach(card => {
+    const cardCat = card.getAttribute('data-cat') || '';
+    card.style.display = cardCat.includes(cat) ? '' : 'none';
+  });
+
+  // Hide section headers when no visible cards in that grid
+  allGrids.forEach((grid, i) => {
+    const visibleCards = grid.querySelectorAll('.pc:not([style*="display: none"])');
+    const isEmpty = visibleCards.length === 0;
+    grid.style.display = isEmpty ? 'none' : '';
+    // Matching section label is the previous sibling div.section-label
+    const label = grid.previousElementSibling;
+    if (label && label.classList.contains('section-label')) {
+      label.style.display = isEmpty ? 'none' : '';
+    }
+  });
+}
+
+// Lazy-load screenshots: use Google's PageSpeed screenshot API as fallback for microlink
+document.querySelectorAll('img.screenshot').forEach(img => {
+  img.addEventListener('error', function() {
+    // Already set in onerror above, but ensure graceful degradation
+    const domain = this.closest('.pc').querySelector('.pc-url') ?
+      this.closest('.pc').querySelector('.pc-url').textContent.trim() : 'website';
+    this.style.display = 'none';
+    // Show the parent as emoji fallback
+    this.parentElement.classList.add('emoji-thumb');
+    // Set a generic icon
+    this.parentElement.style.fontSize = '48px';
+  });
+});
+</script>
+<script src="header-footer-loader.js"></script>
+
+</body>
+</html>
